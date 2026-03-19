@@ -1,5 +1,3 @@
-import os
-
 # 상수 설정 (PEP 8: 대문자 사용, = 앞뒤 공백)
 LOG_FILE = 'mission_computer_main.log'
 ERROR_FILE = 'error.log'
