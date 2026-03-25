@@ -1,5 +1,3 @@
-import os
-
 # 상수 설정 (PEP 8: 대문자 사용, = 앞뒤 공백)
 LOG_FILE = 'mission_computer_main.log'
 ERROR_FILE = 'error.log'
@@ -16,7 +14,7 @@ def analyze_logs():
 
     # 1. 파일 읽기 및 예외 처리
     try:
-        with open(LOG_FILE, 'r', encoding='utf-8') as f:
+        with open(LOG_FILE, 'r', encoding='utf-8') as f: 
             for line in f:
                 clean_line = line.strip()
                 if not clean_line:
@@ -59,3 +57,12 @@ def analyze_logs():
 
 if __name__ == '__main__':
     analyze_logs()
+
+
+
+# 키워드 검색시, 대소문자 관련 처리 필요
+# 'r' , 'rb' 차이 확인
+# 'r'  : 텍스트 파일을 읽을 때 사용
+# 'rb' : 바이너리 파일을 읽을 때 사용
+# 라이브러리 없이 파일의 크기 확인 seek(), tell() 사용
+# chunk 단위로 끊을 때, 로그의 중간에서 끊길 수 있는 문제 관련 처리
